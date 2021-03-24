@@ -1,9 +1,9 @@
 var msg; //mensagem 
 var level = 4; //Nivel
 
-switch (level) {
-	case 1:
-		msg = 'Good luck on the first test';
+switch (level) { //Valor do switch
+	case 1:  	 //Possíveis ocorrências de valores do switch
+		msg = 'Good luck on the first test'; 
 		break;
 
 	case 2:
