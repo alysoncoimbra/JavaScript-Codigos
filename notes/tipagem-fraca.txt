@@ -1,0 +1,9 @@
+	
+	O js possui tipagem fraca, por isso, ele altera o tipo de uma variável em determinadas situações
+onde ele imagina que há um número, mesmo que esse número seja uma string;
+	exemplo1: se tivessemos a expressão lógica ('1' > 0) sendo o cactere 1 uma string e 0 um número, 
+ao invés de retornar um erro ele retornaria true; 
+	Exemplo2: se tivessemos a expressão aritmética ('10' / 2) ele retornaria 5 ao invés de NaN;
+
+	ja em casos onde a string é uma sequência de caracteres não numeros, ele retorna o valor
+NaN 

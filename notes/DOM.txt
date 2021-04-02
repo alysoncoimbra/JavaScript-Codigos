@@ -1,0 +1,79 @@
+
+	CONHECENDO O DOM
+	Basicamente o DOM é um objeto predefinido que representa a página como um todo podendo acessar
+todos os elementos da página já que todos são seus filhos diretos ou nao;
+	Ele serve tanto para a criação quanto para o acesso de páginas HTML;
+	Ele cria o modelo da página ao ser carregada porque cada objeto dele representa uma parte da página;
+	O DOM é um tipo de API porque permite que o meu script converse com o navegador e define
+uma série de regras para que eu possa acessar e atualizar o que é mostrado para o usuário;
+	O DOM possui vários branches que são ramificações de sua árvore de objetos, existem 4 tipos
+principais de branches: O branch document, o branch de elementos, o branch de atributos,
+e o branch de texto;
+	Ao carregar a página o navegador cria um modelo da página, esse modelo é chamado de 
+árvore DOM;
+	A árvore DOM é composta por todos os elementos da página, sendo que a "raiz" da árvore é o branch
+document, ele é o objeto utilizado como chave para acessar os outros elementos;
+	A relação entre os branches é dada de forma hierarquica;
+	Todas  as alterações que os scripts fazem no que o usuário ve são feitas no DOM, não no
+arquivo fonte do HTMl;
+	Os branches de atributos, não são filhos dos elementos HTMl, são partes dele e podem
+ser acessados através do objeto document assim como qualquer outro branch;
+	Branches de  texto não podem ter filhos, e para serem acessados deve-se acessar primeiro o
+seu elemento pai;
+
+	TRABALHANDO COM O DOM
+	Para trabalhar com os elementos da página, primeiro é necessário acessar os elementos, a partir
+daí qualquer outra atualização ou mudança pode ser feita;
+	
+	1° A seleção:
+	Para selecionar um branch de elemento individualmente existem as seguintes formas:
+		1° " getElementById('id');  ": Seleciona um elemento único dentro da página
+pelo seu atributo ID;
+
+		2° " querySelector(); ": Usa um seletor CSS e retorna o primeiro elemento
+correspondente;
+
+	Para selecionar vários branches de elemento há três maneiras:
+		1° " getElementsByClassName('class'); ": Seleciona elementos dentro da página pelo
+seu nome de atributo classe;
+
+		2° " getElementsByTagName('element') ": Seleciona todos as ocorrências deste elemento;
+
+		3° " querySelectorAll(); ": Usa um seletor CSS para selecionar todos os elementos a qual a
+regra se aplica;
+
+nota: Quando nos referimos aos elementos que  estão sendo trabalhados pelo DOM na vdd estamos nos 
+referindo aos branches (nós);
+
+	2° Trabalhos a serem realizados com os elementos selecionados:
+	Para atualizar branches de texto deve ser seguido o seguinte procedimento:
+		1° Selecionar o branch de elemento que contém o branch de texto;
+		
+		2° Usar uma propriedade que selecione esse branch filho, no caso de existir branch de texto
+logo após o branch pai entao a propriedade first-Child pode ser utilizada;
+
+		3° Utilizar a propriedade nodeValue para acessar o conteúdo ou atualizar o branch de text;
+
+	Para acessar conteúdo HTML existem as seguintes propriedades:
+		1° innerHTML : Ja vimos que essa propriedade pode tanto acessar elementos filhos quanto
+acessar conteúdo de texto;
+		
+		2° textoContent : Essa por outro lado já é utilizada somente para acesar conteúdo de texto;
+
+	Ja para criar/adicionar e remover branches da árvore existem as seguintes propriedades:
+		1° createElement();
+		2° createTextNode();
+		3° appendChild();
+		4° removeChild();
+
+nota: ao utilizar essas propriedades e métodos voce esta praticando a manipulação de DOM;
+
+	Para acessar ou atualizar branches de atributos:
+		1° className: Permite obter ou atualizar os valores dos atributos class dos branches de elemento;
+		2° id : Permite obter ou atualizar o valor do atributo id do branch de elemento;
+		3° hasAttribute(); : Esse método verifica se um atributo existe;
+		4° getAttribute(); : Esse método retorna o valor do atributo;
+		5° setAttribute(); : Esse método define um valor para o atributo;
+		6° removeAttribute(); : Esse método remove o valor do atributo;
+
+	

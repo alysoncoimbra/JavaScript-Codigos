@@ -1,0 +1,2 @@
+	
+	O JQuery se tornou popular por causa das falhas dos métodos DOM em alguns navegadores;
